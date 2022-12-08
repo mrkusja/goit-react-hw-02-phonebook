@@ -1,11 +1,8 @@
 import { nanoid } from 'nanoid';
 import { Component } from 'react';
-// import { GlobalStyles } from './GlobalStyles';
 import { ContactForm } from './ContactForm/ContactForm';
 import { ContactList } from './ContactList/ContactList';
-// import { Filter } from './Filter/Filter';
-// import { Header } from './App.styled';
-// import { SecondaryHeader } from './App.styled';
+import { Filter } from './Filter/Filter';
 
 export class App extends Component {
   state = {
@@ -59,18 +56,15 @@ export class App extends Component {
   render() {
     return (
       <>
-        {/* <Header>Phonebook</Header> */}
         <ContactForm addContact={this.addContact} />
-        {/* <SecondaryHeader>Contacts</SecondaryHeader> */}
-        {/* <Filter
+         <Filter
           filter={this.state.filter}
           findContact={this.saveFilteredValue}
-        /> */}
+        />
         <ContactList
           contacts={this.filterContacts()}
           deleteContact={this.deleteContact}
         />
-        {/* <GlobalStyles /> */}
       </>
     );
   }
