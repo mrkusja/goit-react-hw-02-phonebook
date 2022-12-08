@@ -18,7 +18,6 @@ export class App extends Component {
     filter: '',
   };
 
-  //data - объект с именем и телефоном, которые ввели в форме
   addContact = data => {
     const newContact = {
       ...data,
